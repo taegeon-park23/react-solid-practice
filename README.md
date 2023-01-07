@@ -37,3 +37,66 @@ function App() {
   );
 }
 ```
+
+# COMMIT Convernion
+
+## 1. Commit message structure
+```text
+type : subject
+
+body
+
+footer
+```
+
+## 2. Commit type
+- feat : 새로운 기능 추가
+- fix : 버그 수정
+- docs : 문서 수정
+- style : 코드 포맷팅, 세미콜론 누락, 코드 변경이 없는 경우
+- refactor : 코드 리팩토링
+- test : test code, reafactoring test code
+- chore : update build, package-manager
+
+## 3. Subject
+- 제목은 50자를 넘기지 않고, 대문자로 작성하고 마침표를 붙이지 않는다.
+- 과거시제를 사용하지 않고 명령어로 작성한다.
+
+## 4. Body
+- 선택사항이기 때문에 모든 커밋에 본문내용을 작성할 필요는 없다.
+- 부연설명이 필요하거나 커밋의 이유를 설명할 경우 작성해준다.
+- 72자를 넘기지 않고 제목과 구분되기 위해 한칸을 띄워 작성한다.
+
+## 5. footer
+- 선택사항이기 때문에 모든 커밋에 꼬리말을 작성할 필요는 없다.
+- issue tracker id를 작성할 때 사용한다.
+
+# 6. Example
+```
+feat : Summarize changes in around 50 cracyers or less
+
+More detailed explantory text, if neccssary. Wrap it to abount 70
+chracters or so. In some contexts, the first line is treated as the
+subject of the commit and rest of the text as the body.
+The blank line separating the summary from the body is critical(unless you
+omit the body entirely); variaus tools like 'log', 'shorting' and
+'rebase' can get confused if you run the two together.
+
+Explain the pronblem that this commit is solving. Focus on why you
+are making this chang as opposed to how (the code explains that).
+Are there side effects or other unintutive consequenses of this change?
+Here's the place to explain them.
+
+Furhere paragraphs come after blank lines.
+
+ - Bullet points ar okay, too
+
+ - Typically a hyphen or asterisk is used for the bullet, precdeded
+ by a snigle space, with blank lines in between, but conventions vary here
+
+If you use an issue tracker, put references to them at the bottom,
+like this:
+
+Resloves: #123
+See also: #456, #789
+```
