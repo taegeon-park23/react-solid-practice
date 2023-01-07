@@ -9,6 +9,6 @@ export function LSP() {
   };
 
   return (
-    <SearchInput value={value} onChange={handleChange} isLarge />
+    <SearchInput value={value} onChange={handleChange} isLarge aria-label="lsp-search-input"/>
   );
 }
