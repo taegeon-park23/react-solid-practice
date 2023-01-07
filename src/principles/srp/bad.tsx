@@ -4,9 +4,11 @@ import { Product } from "./product";
 import { Rating } from "react-simple-star-rating";
 
 export function Bad() {
+  /* code line 7 ~ 37, It's need to take care of both of these functions into a way much simpler and easier to read and easier to maintain kind of custom hook  */
   const [products, setProducts] = useState([]);
   const [filterRate, setFilterRate] = useState(1);
 
+  // Action for fetch product datas.
   const fetchProducts = async () => {
     const response = await axios.get(
       "https://fakestoreapi.com/products"
@@ -23,6 +25,7 @@ export function Bad() {
     setFilterRate(rate);
   };
 
+  // Action for filtering product datas.
   const filteredProducts = useMemo(
     () =>
       products.filter(
@@ -31,8 +34,10 @@ export function Bad() {
     [products, filterRate]
   );
 
+  // rendering part.
   return (
     <div className="flex flex-col h-full">
+      {/* Rating part */}
       <div className="flex flex-col justify-center items-center">
         <span className="font-semibold">Minimum Rating </span>
         <Rating
@@ -41,7 +46,10 @@ export function Bad() {
           onClick={handleRating}
         />
       </div>
+
+      {/* Viewing products part */}
       <div className="h-full flex flex-wrap justify-center">
+        {/* This map function in here that's looping through and trying to render a bunch of stuff, It's so a huge component, so that is need to segregate as a Product Component.  */}
         {filteredProducts.map((product: any) => (
           <div className="w-56 flex flex-col items-center m-2 max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
