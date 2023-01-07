@@ -52,11 +52,17 @@ footer
 ## 2. Commit type
 - feat : 새로운 기능 추가
 - fix : 버그 수정
+- design : CSS 등 사용자 UI 디자인 변경
+- !BREAKING CHANGE : 커다란 API 변경
+- !HOTFIX : 급하게 치명적인 버그, 수정을 해야하는 경우
 - docs : 문서 수정
 - style : 코드 포맷팅, 세미콜론 누락, 코드 변경이 없는 경우
 - refactor : 코드 리팩토링
+- comment : 필요한 주석 추가 및 변경
 - test : test code, reafactoring test code
 - chore : update build, package-manager
+- rename : 파일 혹은 폴더명을 수정하거나 옮기는 수행할 경우
+- remove : 파일을 삭제하는 작업만 수행할 경우
 
 ## 3. Subject
 - 제목은 50자를 넘기지 않고, 대문자로 작성하고 마침표를 붙이지 않는다.
